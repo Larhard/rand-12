@@ -6,13 +6,13 @@ NC='\033[0m'
 
 set -e
 
+basedir=$(dirname "$(readlink -f "$0")")
+
 sudo apt-get -y install musescore
 sudo apt-get -y install python3-pip
 sudo apt-get -y install timidity
 
-sudo pip3 install pygame
-sudo pip3 install music21
-sudo pip3 install jupyter
+sudo pip3 install -r "$basedir/requirements.txt"
 
 python3 -m music21.configure <<EOF
 Yes

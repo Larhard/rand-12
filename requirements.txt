@@ -1,0 +1,4 @@
+acoustics
+jupyter
+music21
+pygame
