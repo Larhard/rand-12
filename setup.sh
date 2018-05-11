@@ -36,4 +36,20 @@ patch -N -f ~/.music21rc <<EOF || echo "${RED}WARNING: patching .music21rc faile
    <preference name="vectorPath" />
 EOF
 
+sudo patch -N -f /etc/pulse/default.pa <<EOF || echo "${RED}WARNING: patching /etc/pulse/default.pa failed${NC}"
+--- a/default.pa
++++ b/default.pa
+@@ -52,7 +52,7 @@
+ 
+ ### Automatically load driver modules depending on the hardware available
+ .ifexists module-udev-detect.so
+-load-module module-udev-detect
++load-module module-udev-detect tsched=0
+ .else
+ ### Use the static hardware detection module (for systems that lack udev support)
+ load-module module-detect
+EOF
+
+pulseaudio -k
+
 echo "${GREEN}OK${NC}"
