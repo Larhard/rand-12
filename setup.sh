@@ -12,6 +12,7 @@ sudo apt-get -y install timidity
 
 sudo pip3 install pygame
 sudo pip3 install music21
+sudo pip3 install jupyter
 
 python3 -m music21.configure <<EOF
 Yes
