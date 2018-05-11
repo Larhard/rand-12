@@ -53,4 +53,6 @@ EOF
 
 pulseaudio -k
 
+setxkbmap pl
+
 echo "${GREEN}OK${NC}"
