@@ -26,11 +26,13 @@ EOF
 patch -N -f ~/.music21rc <<EOF || echo "${RED}WARNING: patching .music21rc failed${NC}"
 --- a/.music21rc
 +++ b/.music21rc
-@@ -14,7 +14,7 @@
+@@ -13,8 +13,8 @@
+   <localCorpusSettings />
    <preference name="manualCoreCorpusPath" />
    <preference name="midiPath" />
-   <preference name="musescoreDirectPNGPath" />
+-  <preference name="musescoreDirectPNGPath" />
 -  <preference name="musicxmlPath" />
++  <preference name="musescoreDirectPNGPath" value="/usr/bin/mscore" />
 +  <preference name="musicxmlPath" value="musescore" />
    <preference name="pdfPath" />
    <preference name="showFormat" value="musicxml" />
