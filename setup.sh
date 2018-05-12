@@ -60,4 +60,6 @@ setxkbmap pl
 (killall jupyter-notebook && sleep 10s) || echo "No Jupyter Notebooks running"
 jupyter-notebook
 
+pactl set-sink-volume 0 100%
+
 echo "${GREEN}OK${NC}"
