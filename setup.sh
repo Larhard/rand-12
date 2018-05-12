@@ -57,4 +57,7 @@ pulseaudio -k
 
 setxkbmap pl
 
+(killall jupyter-notebook && sleep 10s) || echo "No Jupyter Notebooks running"
+jupyter-notebook
+
 echo "${GREEN}OK${NC}"
